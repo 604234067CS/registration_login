@@ -1,5 +1,5 @@
 <!--
-Into this file, we create a layout for registration page.
+สำหรับหน้าการลงทะเบียน.
 -->
 <?php
 include_once('inc/header.php');

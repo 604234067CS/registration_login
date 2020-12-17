@@ -1,5 +1,5 @@
 <!--
-Into this file, we create a layout for login page.
+หน้าเข้าสู่ระบบ.
 -->
 
 <?php

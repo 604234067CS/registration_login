@@ -1,5 +1,5 @@
 <!--
-Here, we write code for registration.
+code สำหรับการลงทะเบียน.
 -->
 <?php
 require_once('connection.php');

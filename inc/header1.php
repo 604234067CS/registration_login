@@ -1,5 +1,5 @@
 <!--
-this is second header file which is visible after login.
+Header.
 -->
 
 <?php
