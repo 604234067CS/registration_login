@@ -1,4 +1,4 @@
-<?php
+<?php 	session_start();
 
 require_once('connection.php');
 $email = $password = $pwd = '';
@@ -14,8 +14,9 @@ if(mysqli_num_rows($result) > 0)
 	{
 		$id = $row["id"];
 		$email = $row["email"];
-		session_start();
+	
 		$_SESSION['id'] = $id;
+		$_SESSION['vmkm'] = 'vmkm';
 		$_SESSION['email'] = $email;
 	}
 	header("Location: welcome.php");
@@ -24,4 +25,10 @@ else
 {
 	echo "อีเมลหรือรหัสผ่านไม่ถูกต้อง";
 }
+?>
+
+<!-- //----- Login google ------// -->
+<?php
+
+
 ?>

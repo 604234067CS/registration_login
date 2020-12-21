@@ -29,7 +29,7 @@ include_once('link.php');
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
         <button type="submit" name="login" class="btn btn-primary">เข้าสู่ระบบ</button>
-        <a href="reset_password.php">ลืมรหัสผ่าน?</a> <a href="Registration.php">สมัครสมาชิก</a>
+        <a href="forget_password.php">ลืมรหัสผ่าน?</a> <a href="Registration.php">สมัครสมาชิก</a>
     
       </div>
     </div>
