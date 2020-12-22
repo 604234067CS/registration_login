@@ -4,11 +4,24 @@ this is header file which is visible in registration and login page.
 <?php
 include_once('link.php');
 ?>
-<nav class="navbar navbar-default">
-	<div class="container-fluid">
-		<ul class="nav navbar-nav">
-			<li><a href="registration.php">สมัครสมาชิก</a></li>
-			<li><a href="login.php">เข้าสู่ระบบ</a></li>
-		</ul>
-	</div>
-</nav>
+
+<div class="container">
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link active" href="welcome.php">Home</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">สินค้า</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="./index.php">อัฟโหลดรูป</a>
+        <a class="dropdown-item" href="#">-</a>
+        <a class="dropdown-item" href="#">-</a></div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">ติดต่อ</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="Login">เกี่ยวกับ</a>
+    </li>
+  </ul>
+</div>

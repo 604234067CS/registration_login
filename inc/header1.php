@@ -4,7 +4,6 @@ Header.
 
 <?php
 include_once('link.php');
-session_start();
 $email = $_SESSION['email'];
 ?>
 

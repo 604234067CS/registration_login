@@ -14,9 +14,8 @@ if(mysqli_num_rows($result) > 0)
 	{
 		$id = $row["id"];
 		$email = $row["email"];
-	
 		$_SESSION['id'] = $id;
-		$_SESSION['vmkm'] = 'vmkm';
+		// $_SESSION['vmkm'] = 'vmkm';
 		$_SESSION['email'] = $email;
 	}
 	header("Location: welcome.php");
