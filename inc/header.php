@@ -13,7 +13,7 @@ include_once('link.php');
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">สินค้า</a>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="./index.php">อัฟโหลดรูป</a>
+        <a class="dropdown-item" href="./upload_image.php">อัฟโหลดรูป</a>
         <a class="dropdown-item" href="#">-</a>
         <a class="dropdown-item" href="#">-</a></div>
     </li>
