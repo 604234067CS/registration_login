@@ -6,12 +6,21 @@ include_once('link.php');
     <div class="container">
         <h2>อัฟโหลดรูปภาพ</h2>
 
-        <div class="upload-div">
-            <form action="upload.php" class="dropzone" id="dropzone" method="POST"></form>
-        </div>
-        <div>
-        <button type="submit" name="UPLOAD" class="btn btn-primary">อัฟโหลด</button> 
-        </div>
+        <form action="include/upload_banner.php" id="frmTarget" class="dropzone" method="post" enctype="multipart/form-data">
+                                <div class="dz-message">
+                                    <div class="drag-icon-cph">
+                                        <i class="material-icons">touch_app</i>
+                                    </div>
+                                    <h3>Drop files here or click to upload.</h3>
+                                    <div class="fallback">
+										<input name="file" id="file" type="file" multiple />
+									</div>
+                                </div>
+                                <div>
+                                    <input type="submit" id="button" name="button" class="btn btn-primary" value="Upload">
+                                    <input type="button" class="btn bg-grey waves-effect" data-dismiss="modal" value="CLOSE" onClick="javascript:location.reload();">
+                                </div>
+                            </form>
 
     <script>
             Dropzone.autoDiscover = false;
@@ -21,8 +30,8 @@ include_once('link.php');
                     url: "upload.php",
                     paramName: "file_name",
                     maxFilesize: 2,
-                    maxFiles: 10,
-                    acceptedFiles: "image/*,application/pdf",
+                    parallelUploads : 15,
+                    acceptedFiles :".png,.jpg,.gif,.bmp,.jpeg",
                     autoProcessQueue: false
                 });
                 
@@ -31,6 +40,7 @@ include_once('link.php');
                 });
             });
         </script>
+
     </div>
 </body>
 
