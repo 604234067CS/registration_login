@@ -2,25 +2,28 @@
 include_once('link.php');
 ?>
 
+
 <body>
     <div class="container">
         <h2>อัฟโหลดรูปภาพ</h2>
 
-        <form action="include/upload_banner.php" id="frmTarget" class="dropzone" method="post" enctype="multipart/form-data">
+        <form action="upload.php" id="frmTarget" class="dropzone" method="post" enctype="multipart/form-data">
             <div class="dz-message">
                 <div class="drag-icon-cph">
                     <i class="material-icons">touch_app</i>
                 </div>
                 <h3>Drop files here or click to upload.</h3>
                 <div class="fallback">
-                    <input name="file" id="file" type="file" multiple />
+                    <input name="file_name" id="file_name" type="file" multiple />
                 </div>
             </div>
-            <div>
-                <input type="submit" id="button" name="button" class="btn btn-primary" value="Upload">
-                <input type="button" class="btn bg-grey waves-effect" data-dismiss="modal" value="CLOSE" onClick="javascript:location.reload();">
-            </div>
         </form>
+        <div>
+                <input type="submit" id="startUpload" name="button" class="btn btn-primary" value="Upload">
+                <input type="button" class="btn bg-grey waves-effect" data-dismiss="modal" value="CLOSE" onClick="javascript:location.reload();">
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
         <script>
             Dropzone.autoDiscover = false;

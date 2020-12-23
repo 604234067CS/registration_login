@@ -23,35 +23,39 @@ $str_result .= substr($passw ,1,20); //ต่อ string จาก substring ท�
   if(move_uploaded_file($_FILES['file_name']['tmp_name'], $target_file)){
    //$date_n = date('Y-m-d');
    //$hour = date('H:i:s');
-   $sql = "INSERT INTO files (file_name, uploaded_on) VALUES ('".$fileName."', NOW())"; 
+   $sql = "INSERT INTO files (file_name, uploaded_on) VALUES ('".$new_name."', NOW())"; 
    $insert = mysqli_query($conn, $sql);
     //mysql_query($insert);
   }else{
     $msg = 'Error while uploading.';
   }
-
+  
 echo $msg;
 exit;
+// $msg = '';
 
+// srand((double)microtime()*10000000);
+// $str = 'abcdefghijklmnopqrstuvwxyz0123456789'; //string ที่เป็นไปได้ที่จะใช้ในการ random ซึ่งสามารถเพิ่มลดได้ตามความต้องการ
+// $passw = str_shuffle($str);
+// $str_result = "";  //สตริงว่างสำหรับจะรับค่าจากการ random
+// $str_result .= substr($passw ,1,20); //ต่อ string จาก substring ที่ได้จากการ random ตำแหน่ง ทีละ 1 ตัว 
+//                            //จนกว่าจะครบตรามความยาวที่ส่งมา
+//   echo  $count = count($_FILES['file']['name']);
+//     for($i=0;$i<$count;$i++){
+//       $file_name = explode(".", $_FILES['file']['name'][$i]);  
+//       $allowed_ext = array("jpg", "jpeg", "png", "gif");  
+//            $new_name = $str_result . '.' . $file_name[1];  
+//            $sourcePath = $_FILES['file']['tmp_name'][$i];  
 
-/*if(!empty($_FILES)){ 
-  
-     
-    // การกำหนดค่าเส้นทางไฟล์
-    $uploadDir = "uploads/"; 
-    $fileName = basename($_FILES['file_name']['name']); 
-    $uploadFilePath = $uploadDir.$fileName; 
-     
-    // อัปโหลดไฟล์ไปยังฐานข้อมูล
-    if(move_uploaded_file($_FILES['file_name']['tmp_name'], $uploadFilePath)){ 
-        // แทรกข้อมูลไฟล์ในฐานข้อมูล
-        $sql = "INSERT INTO files (file_name, uploaded_on) VALUES ('".$fileName."', NOW())"; 
-        $insert = $conn->query($sql);
-    } 
-} */
-
-
+//            $target_file = 'uploads/'.$new_name;  
+//       if(move_uploaded_file($_FILES['file']['tmp_name'][$i], $target_file)){ 
+//       //$date_n = date('Y-m-d');
+//       //$hour = date('H:i:s');
+//       $sql = "INSERT INTO files (file_name, uploaded_on) VALUES ('".$new_name."', NOW())"; 
+//       $insert = mysqli_query($conn, $sql);
+//           // header('location: pages-galler.php'
+//           //mysql_query($insert);
+//       }
+//     }
 
 ?>
-
-    
