@@ -45,13 +45,13 @@ if (isset($_POST['reset_request_submit'])) {
         $mail->isSMTP();                                            // Send using SMTP
         $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-        $mail->Username   = '604234067@parichat.skru.ac.th';                     // SMTP username
+        $mail->Username   = 'oefprianan@gmail.com';                     // SMTP username
         $mail->Password   = 'password';                               // SMTP password
         $mail->SMTPSecure = 'PHPMailer::ENCRYPTION_SMTPS';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
         $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
     
         //Recipients
-        $mail->setFrom('604234067@parichat.skru.ac.th', 'Mailer');
+        $mail->setFrom('oefprianan@gmail.com', 'Mailer');
         $mail->addAddress($email, $usernameData);     // Add a recipient
         // $mail->addAddress('ellen@example.com');               // Name is optional
         // $mail->addReplyTo('info@example.com', 'Information');
@@ -70,35 +70,7 @@ if (isset($_POST['reset_request_submit'])) {
         $mail->isHTML(true);                                     // Set email format to HTML
         $mail->Subject = 'รีเซ็ตรหัสผ่าน';
         $mail->Body    = $output;
-       // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
-
-//-------------------------------- vv อันเก่า vv------------------------------------------------
-
-    // $mail = new PHPMailer;
-    // $mail->charset = "utf-8";
-    // $mail->isSMTP();        // Set mailer to use SMTP
-    // $mail->Host = 'smtp.gmail.com';                       // Specify main and backup SMTP servers
-    // $mail->SMTPAuth = true;                               // Enable SMTP authentication
-    // $mail->Username = 'oefprianan@gmail.com';                      // SMTP username
-    // $mail->Password = 'password';                          // SMTP password
-    // $mail->SMTPSecure = 'TLS';                            // Enable TLS encryption, `ssl` also accepted
-    // $mail->Port = 587;                                    // TCP port to connect to
-    
-    // $mail->setFrom('oefprianan@gmail.com', 'localhost');
-    // $mail->addAddress($email, $usernameData);               // Add a recipient
-    // // $mail->addAddaddCCress('ellen@example.com');               // Name is optional
-    // // $mail->addReplyTo('info@example.com', 'Information');
-    // // $mail->('cc@example.com');
-    // // $mail->addBCC('bcc@example.com');
-    
-    // // $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-    // // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
-    // $mail->isHTML(true);                                     // Set email format to HTML
-    
-    // $mail->Subject = 'รีเซ็ตรหัสผ่าน';
-    // $mail->Body    = $output;
-    // // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
     
     if(!$mail->send()) {
         echo 'Message could not be sent.';

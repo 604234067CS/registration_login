@@ -25,7 +25,7 @@ $str_result .= substr($passw ,1,20); //ต่อ string จาก substring ท�
    //$hour = date('H:i:s');
    $sql = "INSERT INTO files (file_name, uploaded_on) VALUES ('".$fileName."', NOW())"; 
    $insert = mysqli_query($conn, $sql);
-//mysql_query($insert);
+    //mysql_query($insert);
   }else{
     $msg = 'Error while uploading.';
   }
